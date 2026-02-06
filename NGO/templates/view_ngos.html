@@ -1,0 +1,18 @@
+<h2>All NGOs</h2>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+    </tr>
+    {% for ngo in ngos %}
+    <tr>
+        <td>{{ ngo.name }}</td>
+        <td>{{ ngo.address }}</td>
+        <td>{{ ngo.contact_email }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/admin_dashboard/">Back</a>

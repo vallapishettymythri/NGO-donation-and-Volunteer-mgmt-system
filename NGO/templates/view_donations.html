@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Donations</title>
+</head>
+<body>
+
+<h2>Donations</h2>
+
+<table border="1">
+    <tr>
+        <th>User</th>
+        <th>NGO</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Description</th>
+        <th>Phone</th>
+        <th>Date</th>
+    </tr>
+
+    {% for d in donations %}
+    <tr>
+        <td>{{ d.user.name }}</td>
+        <td>{{ d.ngo.name }}</td>
+        <td>{{ d.donation_type }}</td>
+        <td>{{ d.amount }}</td>
+        <td>{{ d.description }}</td>
+        <td>{{ d.phone }}</td>
+        <td>{{ d.donated_on }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/admin_dashboard/">Back</a>
+
+</body>
+</html>

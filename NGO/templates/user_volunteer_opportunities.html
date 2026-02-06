@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer Opportunities</title>
+</head>
+<body>
+
+
+<h2>Available Volunteer Opportunities</h2>
+
+{% if opportunities %}
+<table border="1">
+    <tr>
+        <th>Foundation Name</th>
+        <th>Location</th>
+        <th>Role</th>
+        <th>Volunteers Needed</th>
+        <th>Action</th>
+    </tr>
+
+    {% for o in opportunities %}
+    <tr>
+        <td>{{ o.name }}</td>
+        <td>{{ o.location }}</td>
+        <td>{{ o.role }}</td>
+        <td>{{ o.required_count }}</td>
+        <td>
+            <a href="/enroll_volunteer/{{ o.id }}/">Enroll</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No volunteer opportunities available.</p>
+{% endif %}
+
+<br>
+<a href="/user_dashboard/">Back</a>
+
+</body>
+</html>

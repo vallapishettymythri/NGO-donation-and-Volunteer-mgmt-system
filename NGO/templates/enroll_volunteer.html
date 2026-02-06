@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enroll Volunteer</title>
+</head>
+<body>
+
+<div class="container"></div>
+<h2>Enroll for {{ opportunity.role }}</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <br><br>
+
+    <input type="text" name="phone" placeholder="Phone Number" required>
+    <br><br>
+
+    <button type="submit">Confirm Enrollment</button>
+</form>
+
+<a href="/user_volunteer_opportunities/">Back</a>
+
+</body>
+</html>

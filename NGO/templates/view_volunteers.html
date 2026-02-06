@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer Applications</title>
+</head>
+<body>
+
+
+<h2>Volunteer Applications</h2>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>NGO / Foundation</th>
+        <th>Role</th>
+    </tr>
+
+    {% for v in volunteers %}
+    <tr>
+        <td>{{ v.name }}</td>
+        <td>{{ v.phone }}</td>
+        <td>{{ v.opportunity.name }}</td>
+        <td>{{ v.opportunity.role }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/admin_dashboard/">Back</a>
+
+</body>
+</html>

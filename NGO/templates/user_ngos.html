@@ -1,0 +1,20 @@
+<h2>Available NGOs</h2>
+
+<table border="1">
+    <tr>
+        <th>NGO</th>
+        <th>Address</th>
+        <th>Action</th>
+    </tr>
+    {% for ngo in ngos %}
+    <tr>
+        <td>{{ ngo.name }}</td>
+        <td>{{ ngo.address }}</td>
+        <td>
+            <a href="/donate/{{ ngo.id }}/">Donate</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/user_dashboard/">Back</a>

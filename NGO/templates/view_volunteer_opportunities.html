@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer Opportunities</title>
+</head>
+<body>
+
+
+<h2>Volunteer Opportunities</h2>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Role</th>
+        <th>Required</th>
+    </tr>
+
+    {% for o in opportunities %}
+    <tr>
+        <td>{{ o.name }}</td>
+        <td>{{ o.location }}</td>
+        <td>{{ o.role }}</td>
+        <td>{{ o.required_count }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/admin_dashboard/">Back</a>
+
+</body>
+</html>
